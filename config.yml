@@ -1,0 +1,6 @@
+organizations:
+  Power-IT-Dev:
+    keep_versions: 5
+    package_type: container
+    skip_packages:
+      - docker-api-image/laravel-php8
