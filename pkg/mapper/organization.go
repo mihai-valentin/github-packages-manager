@@ -8,7 +8,7 @@ func newSkipList(items []string) *SkipList {
 	return &SkipList{items}
 }
 
-func (l *SkipList) Contains(item string) bool {
+func (l *SkipList) contains(item string) bool {
 	for _, i := range l.items {
 		if item == i {
 			return true
@@ -49,4 +49,8 @@ func (o *Organization) GetPackageType() string {
 
 func (o *Organization) GetKeepVersions() int {
 	return o.KeepVersions
+}
+
+func (o *Organization) IsInSkipList(packageName string) bool {
+	return o.SkipList.contains(packageName)
 }
